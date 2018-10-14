@@ -39,24 +39,6 @@
 <script>
 export default {
 	data() {
-		let locale = localStorage.getItem("locale") ? localStorage.getItem("locale") : null
-		if(!locale) {
-			let language = (window.navigator.languages && window.navigator.languages[0]) ||
-				window.navigator.language ||
-				window.navigator.userLanguage ||
-				window.navigator.browserLanguage;
-			if(language.startsWith("ja")) {
-				locale = "ja"
-			} else if(language.startsWith("zh-cn")) {
-				locale = "zh-cn"
-			} else if(language.startsWith("zh-cn")) {
-				locale = "zh-tw"
-			} else {
-				locale = "en"
-			}
-		}
-		this.$i18n.locale = locale
-
 		let description = document.getElementById("description").getAttribute("content")
 		let tw =  "https://twitter.com/intent/tweet?text=" + encodeURIComponent(description + "\n" + location.href + "\n" + " #GreenChain")
 		let fb = "https://www.facebook.com/sharer/sharer.php?u=" + location.href + "&t=" + encodeURIComponent(description)
@@ -71,9 +53,6 @@ export default {
 		}
 	},
 	watch: {
-		locale(v) {
-			localStorage.locale = this.$i18n.locale = v
-		},
 		"$route.name"(v) {
 			let ad = document.getElementById("gc_ad_main")
 			if(ad == void 0) {

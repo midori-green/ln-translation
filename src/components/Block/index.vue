@@ -100,9 +100,6 @@ export default {
 		}
 	},
 	watch: {
-		"$i18n.locale"(v) {
-			this.init()
-		},
 		"$route.params.id"(v) {
 			window.scrollTo(0, 0)
 			v = +v
