@@ -2,74 +2,25 @@
 	<div id="app">
 		<header>
 			<div>
-				<router-link id="logo" class="btn" to="/">Green Chain</router-link>
-				<select v-model="locale">
-					<option value='ja'>日本語</option>
-					<option value='en'>English</option>
-					<option value='zh-cn'>簡体中文</option>
-					<option value='zh-tw'>繁體中文</option>
-					<!-- <option value = 'fr'>français</option> -->
-				</select>
-				<router-link id="logo" class="btn" to="/sponsor">sponsor</router-link>
+				<router-link id="logo" class="btn" to="/">Lightning Green</router-link>
+				<router-link id="logo" class="btn" to="/how-it-works">how it works</router-link>
+				<router-link id="logo" class="btn" to="/docs">docs</router-link>
 			</div>
 		</header>
 		<router-view id="main" />
 
 		<footer id="footer">
 			<b-col>
-				<div class="sns">
-					<a :href="twitter_link" target="_blank" title="Share on Twitter">
-						<img :src="twitter" class="twitter" alt="twitter">
-					</a>
-					<a :href="facebook_link" target="_blank" title="Share on Facebook">
-						<img :src="facebook" class="facebook" alt="facebook">
-					</a>
-				</div>
-
 				<div id="contact">
-					<a href="https://twitter.com/fkazuja" target="_blank">contact</a>
+					<a href="mailto:m@jiyu.green" target="_blank">contact</a>
 				</div>
 			</b-col>
 		</footer>
-
-		<div ref="btn-notify" id="btn-notify" class="onesignal-customlink-container"></div>
 	</div>
 </template>
 
 <script>
 export default {
-	data() {
-		let description = document.getElementById("description").getAttribute("content")
-		let tw =  "https://twitter.com/intent/tweet?text=" + encodeURIComponent(description + "\n" + location.href + "\n" + " #GreenChain")
-		let fb = "https://www.facebook.com/sharer/sharer.php?u=" + location.href + "&t=" + encodeURIComponent(description)
-
-		return {
-			locale: locale,
-			show: true,
-			twitter: require("./images/twitter.png"),
-			facebook: require("./images/facebook.png"),
-			twitter_link: tw,
-			facebook_link: fb,
-		}
-	},
-	watch: {
-		"$route.name"(v) {
-			let ad = document.getElementById("gc_ad_main")
-			if(ad == void 0) {
-				return false
-			}
-
-			if(v === "Sponsor") {
-				ad.style.display = "block"
-			} else {
-				ad.style.display = "none"
-			}
-		}
-	},
-	methods: {
-	},
-	mounted() {
-	}
 }
 </script>
 

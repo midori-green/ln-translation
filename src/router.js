@@ -15,16 +15,16 @@ export default new Router({
 			meta: { skipAuth: true }
 		},
 		{
-			path: '/block/:id',
-			name: 'Block',
+			path: '/how-it-works',
+			name: 'HowItWorks',
 			// lazy load
-			component: () => import(/* webpackChunkName: "about" */ './components/Block/index.vue')
+			component: () => import(/* webpackChunkName: "about" */ './components/HowItWorks/index.vue')
 		},
 		{
-			path: '/sponsor',
-			name: 'Sponsor',
+			path: '/docs',
+			name: 'Docs',
 			// lazy load
-			component: () => import(/* webpackChunkName: "about" */ './components/Sponsor/index.vue')
+			component: () => import(/* webpackChunkName: "about" */ './components/Docs/index.vue')
 		}
 	]
 })
