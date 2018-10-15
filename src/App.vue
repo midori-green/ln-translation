@@ -11,8 +11,14 @@
 
 		<footer id="footer">
 			<b-col>
-				<div id="contact">
+				<div class="contact">
 					<a href="mailto:m@jiyu.green" target="_blank">contact</a>
+				</div>
+
+				<div class="license">
+					<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank">
+						<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+					</a>
 				</div>
 			</b-col>
 		</footer>
@@ -164,23 +170,12 @@ footer + #btn-notify {
 	display: none !important;
 }
 
-.twitter, .facebook {
-	width: 10%;
-	max-width: 50px;
-	margin-left: 10px;
+footer .contact {
+	margin-top: 20px;
 }
 
-#twitter-widget-1 {
-	margin-right: 10px;
-}
-
-.facebook {
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
-.fb-like {
-	margin-right: 10px;
+.license {
+	margin-top: 10px;
 }
 
 /* Ads */

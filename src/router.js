@@ -12,7 +12,12 @@ export default new Router({
 			name: 'Home',
 			// lazy load
 			component: () => import(/* webpackChunkName: "about" */ './components/Home/index.vue'),
-			meta: { skipAuth: true }
+		},
+		{
+			path: '/intro',
+			name: 'Intro',
+			// lazy load
+			component: () => import(/* webpackChunkName: "about" */ './components/Intro/index.vue'),
 		},
 		{
 			path: '/how-it-works',
