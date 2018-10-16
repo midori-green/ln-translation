@@ -3,11 +3,11 @@
 		<header>
 			<div>
 				<router-link id="logo" class="btn" to="/">Lightning Green</router-link>
-				<router-link id="logo" class="btn" to="/how-it-works">how it works</router-link>
-				<router-link id="logo" class="btn" to="/docs">docs</router-link>
+				<router-link id="logo" class="btn" to="/how-it-works">How it Works</router-link>
+				<router-link id="logo" class="btn" to="/docs">Docs</router-link>
 			</div>
 		</header>
-		<router-view id="main" />
+		<router-view id="main" class="text-left" />
 
 		<footer id="footer">
 			<b-col>
@@ -55,25 +55,33 @@ body {
 	font-size: 14px;
 }
 
+.container {
+	max-width: 800px !important;
+}
+
+section {
+	margin-bottom: 30px;
+}
+
 /* Heading */
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem !important;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem !important;
 }
 h3 {
-  font-size: 1.75rem;
+  font-size: 1rem !important;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 0.75rem;
 }
 h5 {
-  font-size: 1.25rem;
+  font-size: 0.5rem;
 }
 h6 {
-  font-size: 1rem;
+  font-size: 0.25rem;
 }
 
 /* Button */
@@ -104,16 +112,17 @@ h6 {
 /* Anker */
 
 a:link {
-	color: #068900;
+	color: green;
+	font-weight: bold;
 }
 a:visited {
-	color: #015400;
+	color: darkgreen;
 }
 a:hover {
-	color: #068900;
+	color: green !important;
 }
 a:active {
-	color: #068900;
+	color: green;
 }
 
 /* Header */
@@ -141,6 +150,7 @@ header > div {
 
 header a {
 	color:green;
+	font-weight: normal !important;
 }
 
 header a:hover {
@@ -159,7 +169,7 @@ header .btn {
 	margin-left: 2%;
 }
 
-/* footer */
+/* Footer */
 
 footer {
 	border-top: 1px solid darkgreen;
@@ -176,6 +186,7 @@ footer .contact {
 
 .license {
 	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
 /* Ads */
