@@ -14,12 +14,6 @@ export default new Router({
 			component: () => import(/* webpackChunkName: "about" */ './components/Home/index.vue'),
 		},
 		{
-			path: '/intro',
-			name: 'Intro',
-			// lazy load
-			component: () => import(/* webpackChunkName: "about" */ './components/Intro/index.vue'),
-		},
-		{
 			path: '/how-it-works',
 			name: 'HowItWorks',
 			// lazy load
@@ -28,6 +22,24 @@ export default new Router({
 		{
 			path: '/docs',
 			name: 'Docs',
+			// lazy load
+			component: () => import(/* webpackChunkName: "about" */ './components/Docs/index.vue')
+		},
+		{
+			path: '/papar',
+			name: 'Papar',
+			// lazy load
+			component: () => import(/* webpackChunkName: "about" */ './components/Docs/index.vue')
+		},
+		{
+			path: '/summary',
+			name: 'Summary',
+			// lazy load
+			component: () => import(/* webpackChunkName: "about" */ './components/Docs/index.vue')
+		},
+		{
+			path: '/overview',
+			name: 'Overview',
 			// lazy load
 			component: () => import(/* webpackChunkName: "about" */ './components/Docs/index.vue')
 		}
